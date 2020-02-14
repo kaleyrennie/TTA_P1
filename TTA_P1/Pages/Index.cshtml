@@ -1,0 +1,64 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-2">Maggie Rogers</h1>
+    <h2 class="display-3">Light On</h2>
+
+</div>
+
+<center>
+    <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/MSFjYe54uv4"
+            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+
+<html>
+<style>
+    #myContainer {
+        width: 370px;
+        height: 370px;
+        position: relative;
+        background: burlywood;
+    }
+
+    #myAnimation {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        background-color: blue;
+    }
+</style>
+<body>
+
+    <p>
+        <button onclick="myMove()">Click Here!</button>
+    </p>
+
+    <div id="myContainer">
+        <div id="myAnimation"></div>
+    </div>
+
+    <script>
+function myMove() {
+  var elem = document.getElementById("myAnimation");
+  var pos = 0;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++;
+      elem.style.top = pos + 'px';
+      elem.style.left = pos + 'px';
+    }
+  }
+}
+    </script> </center>
+
+</body>
+</html>
